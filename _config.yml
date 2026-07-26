@@ -9,11 +9,11 @@ last_name:
 contact_note: >
   可以通过邮件或 GitHub 联系到我。
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  东北大学软件工程专业本科生的个人主页。
+  东北大学信息安全专业本科生的个人主页。
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: academic-homepage, software-engineering, software-security, northeastern-university # add your own keywords or leave empty
+keywords: academic-homepage, information-security, cyber-security, northeastern-university # add your own keywords or leave empty
 lang: cn # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

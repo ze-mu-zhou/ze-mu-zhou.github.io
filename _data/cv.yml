@@ -4,42 +4,40 @@ cv:
   email: 20246122@stu.neu.edu.cn
   location: 中国 辽宁 沈阳
   image: ""
-  summary: 东北大学软件工程专业本科生，兴趣为软件与系统安全、算法编程与数学建模。
+  summary: 东北大学信息安全专业本科生，热衷于漏洞挖掘与安全竞赛，也喜欢算法编程和数学建模。
 
   social_networks:
     - network: GitHub
       username: ze-mu-zhou
 
   sections:
-    教育经历:
+    Education:
       - institution: 东北大学
         location: 中国 辽宁 沈阳
-        area: 软件工程
-        studyType: 本科在读
-        start_date: 2024
-        end_date: 至今
+        area: 信息安全
+        studyType: 本科
+        start_date: 2024-09
+        end_date: present
         highlights:
-          - 大学英语六级（CET-6）：482 分
+          - 在读
 
-    荣誉与奖项:
-      - title: 第十七届蓝桥杯全国总决赛 Python 组三等奖
+    Awards:
+      - title: 蓝桥杯：第十七届全国总决赛 Python 组三等奖、辽宁赛区 Python 组省一等奖；第十六届辽宁赛区 Java 组省二等奖
+        date: 2025-2026
+      - title: 信息安全竞赛：全国大学生信息安全竞赛（CISCN）入围半决赛、第九届软件系统安全赛东北赛区半决赛二等奖
         date: 2026
       - title: 美国大学生数学建模竞赛（MCM/ICM）M 奖（Meritorious Winner）
         date: 2026
-      - title: 全国大学生信息安全竞赛（CISCN）入围半决赛
-        date: 2026
-      - title: 第九届软件系统安全赛东北赛区半决赛二等奖
-        date: 2026
-      - title: 第十七届蓝桥杯辽宁赛区 Python 组省一等奖
-        date: 2026
-      - title: 第十六届蓝桥杯辽宁赛区 Java 组省二等奖
-        date: 2025
       - title: 第三届"软件杯"软件设计大赛二等奖
         date: ""
       - title: 外研杯铜奖
         date: ""
 
-    漏洞研究:
+    Languages:
+      - name: 英语
+        summary: 大学英语六级（CET-6）482 分
+
+    Publications:
       - title: CVE-2026-31323（dash 漏洞发现）
         url: https://www.cve.org/CVERecord?id=CVE-2026-31323
-        date: 2026
+        releaseDate: 2026
