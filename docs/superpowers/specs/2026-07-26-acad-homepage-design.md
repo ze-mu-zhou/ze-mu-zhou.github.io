@@ -39,7 +39,9 @@
 
 ## 遗留（内容侧，非阻塞）
 
-- `_pages/about.md` 仍是模板示例内容，需本人替换（教育经历、论文、项目）。
+- `_pages/about.md` 已填入真实内容（2026-07-26）：NEU 软工本科、9 项竞赛/获奖、
+  CVE-2026-31323；教育经历起始年 2024.09 系从学号邮箱推断，待本人确认。
+- Publications/Invited Talks/Internships 暂无内容，板块已移除，需要时照模板加回。
 - 头像/favicon 仍是模板默认图（`images/`，可用 favicon-generator 生成后替换）。
 - Google Analytics / 各站长平台 SEO 验证未配。
 - Scholar 爬虫按上述方法可随时补开。
