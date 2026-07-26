@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Zemu's Homepage"
-description              : "Software Engineering student at Northeastern University, China."
+title                    : "zemu 的主页"
+description              : "东北大学软件工程专业本科生的个人主页。"
 repository               : "ze-mu-zhou/ze-mu-zhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,9 +23,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "zemu"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Software Engineering, Northeastern University, China"
-  location         : "Shenyang, Liaoning, China"
-  employer         : "Northeastern University, China"
+  bio              : "东北大学 软件工程专业 本科在读"
+  location         : "中国 沈阳"
+  employer         : "东北大学"
   pubmed           : 
   googlescholar    :  # e.g., "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
   email            : "20246122@stu.neu.edu.cn"
