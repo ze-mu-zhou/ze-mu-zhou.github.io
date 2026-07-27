@@ -1,0 +1,341 @@
+/*******************************************************************************
+ * Themes — site-local override of al_folio_core's _themes.scss
+ * (see docs/CUSTOMIZE.md "Changing theme color")
+ *
+ * Palette: gold / orange / yellow primary, blue secondary.
+ * Base file: al_folio_core 1.0.11; only color mappings changed and the
+ * "Geometric accents" section appended at the end. Keep in sync on upgrades
+ * via `bundle exec al-folio upgrade overrides diff _sass/_themes.scss`.
+ ******************************************************************************/
+@use "variables" as v;
+@use "sass:color";
+
+:root {
+  color-scheme: light;
+  --global-bg-color: #{v.$white-color};
+  --global-code-bg-color: rgba(217, 119, 6, 0.06);
+  --global-text-color: #{v.$black-color};
+  --global-text-color-light: #{v.$grey-color};
+  --global-theme-color: #b45309;
+  --global-hover-color: #d97706;
+  --global-hover-text-color: #{v.$white-color};
+  --global-footer-bg-color: #{v.$grey-color-dark};
+  --global-footer-text-color: #{v.$grey-color-light};
+  --global-footer-link-color: #{v.$white-color};
+  --global-distill-app-color: #{v.$grey-color};
+  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-card-bg-color: #{v.$white-color};
+  --global-highlight-color: #{v.$red-color-dark};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$black-color, "red", v.$space: rgb)},
+    #{color.channel(v.$black-color, "green", v.$space: rgb)},
+    #{color.channel(v.$black-color, "blue", v.$space: rgb)},
+    0.4
+  );
+  --global-back-to-top-text-color: #{v.$white-color};
+  --global-newsletter-bg-color: #{v.$white-color};
+  --global-newsletter-text-color: #{v.$black-color};
+
+  /* Geometric accent tokens (gold/orange/yellow + blue) */
+  --geo-gold-deep: #b45309;
+  --geo-gold: #d97706;
+  --geo-amber: #f59e0b;
+  --geo-yellow: #fbbf24;
+  --geo-blue: #2563eb;
+  --geo-selection-bg: rgba(245, 158, 11, 0.25);
+
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #e2f5ec;
+  --global-tip-block-text: #215d42;
+  --global-tip-block-title: #359469;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #fff8d8;
+  --global-warning-block-text: #6b5900;
+  --global-warning-block-title: #b29400;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-text: #600;
+  --global-danger-block-title: #c00;
+
+  #light-toggle-system {
+    display: inline-block;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: v.$back-to-top-bottom;
+    right: v.$back-to-top-right;
+    height: v.$back-to-top-height;
+    width: v.$back-to-top-width;
+    z-index: v.$back-to-top-z-index;
+  }
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --global-bg-color: #{v.$grey-color-dark};
+  --global-code-bg-color: #{v.$code-bg-color-dark};
+  --global-text-color: #{v.$grey-color-light};
+  --global-text-color-light: #{v.$grey-color};
+  --global-theme-color: #fbbf24;
+  --global-hover-color: #f59e0b;
+  --global-hover-text-color: #{v.$white-color};
+  --global-footer-bg-color: #{v.$grey-color-light};
+  --global-footer-text-color: #{v.$grey-color-dark};
+  --global-footer-link-color: #{v.$black-color};
+  --global-distill-app-color: #{v.$grey-color-light};
+  --global-divider-color: #424246;
+  --global-card-bg-color: #{v.$grey-900};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$white-color, "red", v.$space: rgb)},
+    #{color.channel(v.$white-color, "green", v.$space: rgb)},
+    #{color.channel(v.$white-color, "blue", v.$space: rgb)},
+    0.5
+  );
+  --global-back-to-top-text-color: #{v.$black-color};
+  --global-newsletter-bg-color: #{v.$grey-color-light};
+  --global-newsletter-text-color: #{v.$grey-color-dark};
+
+  /* Geometric accent tokens — brightened for dark backgrounds */
+  --geo-gold-deep: #d97706;
+  --geo-gold: #f59e0b;
+  --geo-amber: #fbbf24;
+  --geo-yellow: #fde047;
+  --geo-blue: #60a5fa;
+  --geo-selection-bg: rgba(251, 191, 36, 0.3);
+
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #215d42;
+  --global-tip-block-text: #beffe2;
+  --global-tip-block-title: #e2f5ec;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #6b5900;
+  --global-warning-block-text: #fff2af;
+  --global-warning-block-title: #fff8d8;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #600;
+  --global-danger-block-text: #ffb9b9;
+  --global-danger-block-title: #ffe0e0;
+
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
+}
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: inline-block;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: inline-block;
+  }
+}
+
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+
+  --fa-font: var(--fa-font-solid);
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 1em;
+  height: 1em;
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  font: var(--fa-font);
+}
+
+/* Left half: MOON */
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+
+/* Right half: SUN */
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px; /* slight overflow to avoid right-edge clipping */
+  transform: translateX(-1px); /* visually re-center the sun half */
+}
+
+#light-toggle:hover .fa-half-sun-moon::before {
+  color: var(--global-theme-color);
+}
+
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--global-theme-color);
+}
+
+/*******************************************************************************
+ * Geometric accents — lines and shapes tying the palette together.
+ * Gold leads, blue answers; mirrored spectrum lines frame the page.
+ ******************************************************************************/
+
+/* Spectrum line along the top edge of the navbar (gold -> blue) */
+#navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--geo-gold-deep) 0%,
+    var(--geo-gold) 34%,
+    var(--geo-amber) 58%,
+    var(--geo-yellow) 76%,
+    var(--geo-blue) 100%
+  );
+  pointer-events: none;
+}
+
+/* Mirrored spectrum line along the top edge of the footer (blue -> gold) */
+footer.fixed-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--geo-blue) 0%,
+    var(--geo-yellow) 24%,
+    var(--geo-amber) 42%,
+    var(--geo-gold) 66%,
+    var(--geo-gold-deep) 100%
+  );
+  pointer-events: none;
+}
+
+/* Page title set in gradient ink (gold flowing into blue) */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .post-header .post-title {
+    width: fit-content;
+    background-image: linear-gradient(100deg, var(--geo-gold-deep) 0%, var(--geo-gold) 38%, var(--geo-amber) 62%, var(--geo-blue) 115%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Section headings: a gold dash answered by a blue dash */
+.post h2::after {
+  content: "";
+  display: block;
+  width: 3.3rem;
+  height: 3px;
+  margin-top: 0.45rem;
+  background: linear-gradient(
+    90deg,
+    var(--geo-gold) 0,
+    var(--geo-gold) 2.25rem,
+    transparent 2.25rem,
+    transparent 2.55rem,
+    var(--geo-blue) 2.55rem,
+    var(--geo-blue) 3.3rem
+  );
+}
+
+/* Profile photo: square corner brackets against the rounded image */
+.profile figure {
+  position: relative;
+}
+
+.profile figure::before,
+.profile figure::after {
+  content: "";
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  pointer-events: none;
+}
+
+.profile figure::before {
+  top: -0.45rem;
+  left: -0.45rem;
+  border-top: 2.5px solid var(--geo-gold);
+  border-left: 2.5px solid var(--geo-gold);
+}
+
+.profile figure::after {
+  bottom: -0.45rem;
+  right: -0.45rem;
+  border-bottom: 2.5px solid var(--geo-blue);
+  border-right: 2.5px solid var(--geo-blue);
+}
+
+/* News dates keyed in gold */
+.news table th {
+  color: var(--global-theme-color);
+  font-weight: 500;
+}
+
+/* Text selection in translucent gold */
+::selection {
+  background: var(--geo-selection-bg);
+}
